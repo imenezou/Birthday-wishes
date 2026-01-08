@@ -290,17 +290,25 @@ button:active {
 /* Video step */
 
 .video-wrapper {
+  position: relative;
   margin-top: 12px;
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 56.25%; /* ratio 16:9 */
+  height: 0;
   border-radius: 18px;
   overflow: hidden;
   box-shadow: 0 14px 30px rgba(0,0,0,0.6);
 }
 
-/* vidéo ultra grande dans la carte */
-.video-wrapper video{
-  display: block;
+.video-wrapper video,
+.video-wrapper iframe {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: min(70vh, 500px); /* prend jusqu’à 70% de la hauteur de l’écran */
+  height: 100%;
   border: 0;
   object-fit: cover;
 }
@@ -381,13 +389,10 @@ a:hover { text-decoration: underline; }
     max-height: 60vh;
     font-size: 0.9rem;
   }
-  .video-wrapper video,
-  .video-wrapper iframe {
-    height: 70vh; /* quasi plein écran en hauteur sur tel */
-  }
+  
 
   .video-wrapper {
-    padding-bottom: 75%;
+    padding-bottom: 65%;
     border-radius: 14px;
   }
 
@@ -404,5 +409,7 @@ a:hover { text-decoration: underline; }
     flex-direction: column;
   }
 }
+
+
 
 
