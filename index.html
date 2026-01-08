@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Joyeux anniversaire Nayla</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="confetti-canvas"></canvas>
+
+  <main>
+    <!-- ÉTAPE 0 : COUNTDOWN / MAKE A WISH -->
+    <section id="step-countdown" class="step active">
+      <div class="countdown-fullscreen">
+        <div id="countNumber" class="countdown-number">3</div>
+        <div id="wishText" class="wish-text">MAKE A WISH</div>
+      </div>
+    </section>
+
+    <!-- ÉTAPE 1 : GÂTEAU -->
+    <section id="step-cake" class="step">
+      <div class="cake-wrapper">
+        <div class="cake">
+          <div class="plate"></div>
+          <div class="layer layer-bottom"></div>
+          <div class="layer layer-middle"></div>
+          <div class="layer layer-top"></div>
+          <div class="candle">
+            <div class="flame" id="flame"></div>
+          </div>
+        </div>
+        <div class="cake-text">
+          <h1>Joyeux anniversaire Nayla</h1>
+          <p>Fais un vœu et clique pour souffler ta bougie 🎂</p>
+          <button id="btnBlow" class="btn-ghost">Souffler la bougie</button>
+          <button id="btnToLetter" class="btn-main">A message for you 💌</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ÉTAPE 2 : LETTRE -->
+    <section id="step-letter" class="step">
+      <div class="card">
+        <h2>Message awaiting for you ...</h2>
+        <p class="hint">Avoue tu t'y attendais pas. Haha!!</p>
+        <div class="letter">
+Alors comme tu peux le deviner, les examens approchent à grand pas mais je prends
+quand même le temps de te coder un site web. Si ça, ce n'est pas une preuve d'amour,
+je sais pas ce qu'il te faut.
+JE RIGOLE.
+Tu sais très bien que je le fais avec plaisir.
+Tu sais que je t’aime beaucoup (si tu le savais pas, bah maintenant tu le sais) parce que je n'hésite pas à partager mon chocolat avec toi,
+et ça pour moi, c’est du très très sérieux.
+Cette année à tes côtés fut incroyablement belle, remplie de moments inoubliables, de joie et de rires.
+Ainsi, pour cette nouvelle année de ta vie, je te souhaite de réussir, d'être heureuse, de te sentir fière de toi et de croire en tes capacités
+parce que s'il y a bien une personne capable d'accomplir ses rêves c'est toi. T'as des gens qui t'aiment
+énormément et qui te soutiennent et qui croient en toi.
+Never forget I'll always be here for you if you need me.
+If you got issues, I got tissues.
+Live, Love, Laugh and don't hold back.
+Happy birthday pookie ❤.
+        </div>
+        <div class="actions">
+          <button id="btnBackToCake" class="btn-ghost">Revoir le gâteau</button>
+          <button id="btnToVideo" class="btn-main">Ready to dance ?</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ÉTAPE 3 : VIDÉO -->
+    <section id="step-video" class="step">
+      <div class="card">
+        <h2>Petit montage</h2>
+        <p class="hint">LET'S DANCEEEEE !!!!!!!</p>
+
+        <div class="video-wrapper">
+          <video class="video-local" controls>
+            <source src="Edit.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="actions">
+          <button id="btnBackToLetter" class="btn-ghost">Go back to message</button>
+          <button id="btnToFinal" class="btn-main">Dernière surprise</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ÉTAPE 4 : FINAL -->
+    <section id="step-final" class="step">
+      <div class="card center">
+        <h2>Petit épilogue</h2>
+        <p class="final-text">
+          Happy birthday
+        </p>
+        <div class="final-image-wrapper">
+          <img src="collage.png" alt="Nos souvenirs ensemble" class="final-image">
+        </div>
+
+        <button id="btnMoreConfetti" class="btn-main">
+          Relancer les confettis 🎉
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
